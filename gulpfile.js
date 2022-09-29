@@ -54,7 +54,7 @@ gulp.task("browser-sync", browser);
 // Monitorar o sass
 const watch = () => {
   gulp.watch("./scss/*.scss", buildStyles, browser);
-  gulp.watch("*.html").on("change", browserSync.reload);
+  gulp.watch("./src/pages/*.php").on("change", browserSync.reload);
   gulp.watch("ts/**/*.ts", typescriptFunction);
 };
 gulp.task("watch", watch);
